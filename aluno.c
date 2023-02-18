@@ -24,5 +24,5 @@ int main(void){
 
     printf("----------RESULTADO FINAL----------");
     aluno.media = (aluno.nota_av1 + aluno.nota_av2) / 2;
-    printf("\n A média do Aluno = %2.f", aluno.media);
+    printf("\n A média do Aluno = %3.f", aluno.media);
 }
