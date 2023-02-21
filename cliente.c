@@ -5,9 +5,14 @@ struct cliente{
     int idade;
 };
 
+struct filme{
+    int classificacao_filme;
+    int esta_disponivel;
+};
+
 int main(void){
     struct cliente cli;
-    int classificacao_filme;
+    struct filme fi;
     
     printf("\n Informe o nome do cliente: ");
     fflush(stdin);
@@ -17,10 +22,15 @@ int main(void){
     scanf("\n %d", &cli.idade);
 
     printf("\n Informe a classificação do filme: ");
-    scanf("\n %d",&classificacao_filme);
+    scanf("\n %d",&fi.classificacao_filme);
+
+    printf("\n Informe 0 se o filmes está disponível ou 1 se não está disponível: ");
+    scanf("%d", &fi.esta_disponivel);
 
     printf("\n Cliente: %s", cli.nome);
-    printf("\n Idade: %d \n", cli.idade);
-    printf("\n Classificação do filme: %d anos \n", classificacao_filme);
-    return 0;
+    printf("\n Idade: %d anos \n", cli.idade);
+    printf("\n Classificação do filme: %d anos \n", fi.classificacao_filme);
+    printf("\n Está diponível: %d", fi.esta_disponivel);
+    printf("\n Filme pode ser locado pelo cliente: %d", (fi.esta_disponivel) && (cli.idade >= fi.classificacao_filme));
+    printf("\n Anos restantes: %d", (cli.idade < fi.classificacao_filme) * (fi.classificacao_filme - cli.idade));
 }
