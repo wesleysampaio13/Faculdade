@@ -22,23 +22,8 @@ int main(void){
     printf("\n Digite sua opção: ");
     scanf("%s",&x);
 
-    switch(x) {
-        
-        case '1':
-        printf("\n Você escolheu o serviço LAVAÇÃO NORMAL");
-        break;
+   while (x) {
 
-        case '2':
-        printf("\n Você escolheu o serviço POLIMENTO");
-        break;
-
-        case '3':
-        printf("\n Você escolheu o serviço HIGIENIZAÇÃO");
-        break;
-
-        case '4':
-        printf("\n Você escolheu o serviço TRATAMENTO DE MOTOR");
-        break;
-    }
-    return 0;
+   }     
+    return 0;   
 }
